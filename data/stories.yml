@@ -1,0 +1,16 @@
+version: "3.1"
+stories:
+- story: logistics qa
+  steps:
+  - or:
+    - intent: 物流问题_催发货 #催发货
+    - intent: 物流问题_发货问题咨询 #发货问题咨询
+    - intent: 物流问题_催物流 #催物流
+    - intent: 物流问题_物流异常问题
+    - intent: 物流问题_物流方式
+    - intent: 售后问题_运费问题
+    - intent: 物流问题_用户未收到货 #用户未收到货
+    - intent: 商品问题_款式问题
+    - intent: 商品问题_颜色问题
+    - intent: 商品问题_款式问题
+  - action: action_handle_conversation

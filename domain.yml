@@ -1,0 +1,32 @@
+version: "3.1"
+
+intents:
+- 物流问题_催发货
+- 物流问题_发货问题咨询
+- 物流问题_催物流
+- 物流问题_错发货
+- 物流问题_少发漏发
+- 物流问题_用户拒收问题
+- 物流问题_用户未收到货
+- 售后问题_退货
+- 商品问题_尺码问题
+- 商品问题_颜色问题
+- 商品问题_款式问题
+- 售后问题_运费问题
+- 物流问题_物流方式
+- 物流问题_物流异常问题
+
+actions:
+- action_handle_conversation
+- action_handle_logistics_operations
+- action_handle_delivery_info
+
+#forms:
+#  weather_form:
+#    required_slots:
+#    - date-time
+#    - address
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
