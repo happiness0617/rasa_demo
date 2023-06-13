@@ -12,7 +12,7 @@ from langchain.chains import ConversationChain, LLMChain
 
 import os
 
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = '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'
 """
 此类功能如下：
 1. 需要处理某个intent的回复：
@@ -87,15 +87,15 @@ def generate_message(params: dict, first_intent=True, role="system"):
 
         info = f"{base_info} 意图相关知识:{policy_info}\n对话的目的:{conversion_purpose}"
 
-    elif intent == "商品问题/款式问题":
+    elif intent == "商品问题_款式问题":
         reference_content = params["reference_content"]
         reference_content = ""
         info = reference_content
-    elif intent == "商品问题/尺码问题":
+    elif intent == "商品问题_尺码问题":
         reference_content = params["reference_content"]
         reference_content = "如果尺码较小，给用户换货的建议；如果尺码偏大，可以给解释一下冬天是需要穿衣服的"
         info = reference_content
-    elif intent == "商品问题/颜色问题":
+    elif intent == "商品问题_颜色问题":
         reference_content = params["reference_content"]
         reference_content = "先推销当前衣服的颜色，再提供其他颜色，给用户换货的建议"
         info = reference_content

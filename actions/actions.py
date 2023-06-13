@@ -20,7 +20,7 @@ class ActionHandleConversation(Action):
         print(json.dumps(tracker.latest_message, indent=2, ensure_ascii=False))
         # 获取用户的输入以及对应的意图
         user_input = tracker.latest_message.get("text", "")
-        intent = tracker.latest_message.get('response_selector', {}).get('default',{}).get("response",{}).get("intent_response_key","")
+        intent = tracker.latest_message.get('intent', {}).get('name',"")
         intents_history_list.append(intent)
 
         # TODO 根据intent，通过embedding，mapping确定需要封装的已知信息,先写死为运费相关知识
